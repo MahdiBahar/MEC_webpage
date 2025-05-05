@@ -45,21 +45,32 @@
             color: #ef4444;
             text-align: center;
         }
-        .team-info, .product-info {
+        .team-info {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 1rem;
             margin-bottom: 1.5rem;
         }
-        .product-info {
-            position: relative;
-            padding-bottom: 3rem; /* space for button */
-        }
-        .team-info p, .product-info p {
+        .team-info p {
             line-height: 1.6;
+            margin: 0;
         }
-        .cta {
+        .product-info {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 3rem; /* ensure space for button */
+        }
+        .product-info p {
+            line-height: 1.6;
+            margin: 0 0 1rem;
+        }
+        /* Position button at bottom-left */
+        .product-info .cta {
             position: absolute;
             bottom: 1rem;
             left: 1rem;
