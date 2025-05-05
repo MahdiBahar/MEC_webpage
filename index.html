@@ -14,6 +14,7 @@
         header {
             background-color: #fecaca;
         }
+
         /* Constrain header content to align with sections */
         .header-container {
             max-width: 900px;
@@ -52,10 +53,7 @@
             padding: 1rem;
             margin-bottom: 1.5rem;
         }
-        .team-info p {
-            line-height: 1.6;
-            margin: 0;
-        }
+   
         .product-info {
             background-color: #fff;
             border-radius: 8px;
@@ -65,9 +63,11 @@
             position: relative;
             padding-bottom: 3rem; /* ensure space for button */
         }
-        .product-info p {
+        .team-info p, .product-info p {
             line-height: 1.6;
             margin: 0 0 1rem;
+            text-align: justify;        
+            text-justify: inter-word;    
         }
         /* Position button at bottom-left */
         .product-info .cta {
@@ -83,7 +83,7 @@
             cursor: pointer;
             text-decoration: none;
         }
-        .cta:hover {
+        .product-info .cta:hover {
             background-color: #ef4444;
         }
         .text-center {
