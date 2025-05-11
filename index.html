@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مرکز تعالی هوش مصنوعی</title>
     <style>
+        
+        @font-face {
+        font-family: 'IRANSansX';
+        src: url('IRANSansX-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        
+        
+        
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'IRANSansX', sans-serif;
             background-color: #f5f5f5;
             color: #333;
         }
         header {
-            background-color: #fecaca;
+            background-color: #4b5563;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         /* Constrain header content to align with sections */
@@ -21,13 +34,17 @@
             margin: 0 auto;
             padding: 1rem;
             position: relative;
-            text-align: right;
+            display: flex;
+            justify-content: space-between;
         }
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column-reverse; /* switch to column on smaller screens */
+                align-items: center;
+                gap:  1rem;
+        }
+}
         header img.logo {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
             height: 40px;
         }
         header h1 {
@@ -74,18 +91,41 @@
             position: absolute;
             bottom: 1rem;
             left: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #f87171;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
+            padding: 0.5rem 0.7rem;
+            background-color: white;
+            border: solid 1px #f87171;
+            color: #ef4444;
+            box-shadow: 0px 0px 4px 0px #ef4444;
+            border-radius: 8px;
+            font-size: 0.8rem;
             cursor: pointer;
             text-decoration: none;
         }
+        
         .product-info .cta:hover {
             background-color: #ef4444;
+            color: white;
         }
+
+        .product-info .cta_deactive {
+            background-color: white;
+            border: solid 1px #d1d5db;
+            color: #6b7280;
+            box-shadow: 0px 0px 4px 0px #374151;
+            cursor:default;
+        }
+
+        
+        .product-info .cta_deactive:hover {
+            background-color: white;
+            color: #6b7280;
+        }
+
+
+      
+
+
+
         .text-center {
             text-align: center;
         }
@@ -94,9 +134,9 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="logo.jpg" alt="لوگو" class="logo">
             <h1>مرکز تعالی هوش مصنوعی و داده‌های پیشرفته</h1>
-        <div>
+            <img src="logo.jpg" alt="لوگو" class="logo">
+        </div>
     </header>
 
     <div class="container">
@@ -124,7 +164,7 @@
                  بعلاوه، این سامانه می‌تواند بهترین وام‌های متناسب با کاربران و مشتریان بانک را توصیه کند. </p>
               
               <div class="text-center">
-                <a class="cta" href="product1.html">مشاهده سامانه </a>
+                <a class="cta" href="https://loan-recom.aimec.ir">مشاهده سامانه </a>
               </div>
             </div>
         </section>
@@ -133,13 +173,12 @@
             <!-- <h2 class="section-title">محصول اول</h2> -->
             <div class="product-info">
                 <h2>سامانه یافتن لینک‌های جعلی</h2>
-              <p>این محصول با هدف طراحی و پیاده‌سازی یک سامانه هوشمند تشخیص لینک‌های جعلی مرتبط با بانک ملت اجرا شده است. 
-                سامانه مذکور با بهره‌گیری از تکنیک‌های پیشرفته هوش مصنوعی، به‌طور خودکار لینک‌های مشکوک را شناسایی، ارزیابی و طبقه‌بندی می‌کند. 
-                این سامانه از موتورهای جست‌وجو و الگوریتم‌های پیشرفته برای یافتن لینک‌های جعلی استفاده کرده و با ارزیابی دقیق شباهت‌ها با لینک‌های معتبر، به تشخیص لینک‌های مشکوک می‌پردازد.
-                سامانه هوشمند تشخیص فیشینگ بانک ملت می‌تواند به‌عنوان یک ابزار کارآمد در جهت افزایش امنیت و حفاظت از اطلاعات کاربران و مشتریان بانک به کار گرفته شود. </p>
+              <p>این سامانه با هدف شناسایی و مقابله با لینک‌های جعلی (فیشینگ) که مشتریان بانک ملت را هدف قرار می‌دهند، طراحی و پیاده‌سازی شده است. سامانه به‌صورت هوشمند عمل کرده و با بهره‌گیری از الگوریتم‌های یادگیری ماشین و یادگیری عمیق، لینک‌های مشکوک را از میان نتایج جست‌وجوی اینترنتی استخراج و تحلیل می‌کند.
+
+                سامانه هوشمند تشخیص لینک‌های جعلی می‌تواند نقش مؤثری در افزایش امنیت مشتریان بانک و کاهش تهدیدات فیشینگ ایفا کند. </p>
               
               <div class="text-center">
-                <a class="cta" href="product2.html"> بزودی ...</a>
+                <div class="cta cta_deactive"> بزودی ...</div>
               </div>
             </div>
         </section>
@@ -148,14 +187,12 @@
             <!-- <h2 class="section-title">محصول اول</h2> -->
             <div class="product-info">
                 <h2>سامانه تحلیل احساس کاربران</h2>
-              <p>یکی از مهمترین دغدغه های بانک های پیشرو در دنیا بهبود و ارتقا تجربه کاربران است. 
-                یکی از بهترین منابع آنالیز تجربه کاربران، نظرات آنان در خصوص اپلیکیشن ها و سامانه ها میباشد. 
-                درنتیجه بررسی این نظرات در خصوص اپلیکیشن های بانکی میتواند تحلیل بسیار مناسبی به بانک ارائه دهد.  
-                راه حل پیشنهادی طراحی و پیاده سازی سامانه آنالیز و تحلیل احساسات و متون نظرات کاربران مبتنی بر هوش مصنوعی است. 
-                در این سامانه امکان استخراج و تحلیل تمام اپلیکیشن های بانکی داخلی و خارجی وجود داشته و در فاز توسعه آن بحث سیستم توصیه گر مدنظر قرار خواهد گرفت.</p>
+              <p>یکی از مهمترین دغدغه‌های بانک‌های پیشرو در دنیا، بهبود و ارتقا تجربه کاربران است. 
+                درنتیجه بررسی نظرات کاربران در خصوص اپلیکیشن‌های بانکی می‌تواند تحلیل بسیار مناسبی به سازمان ارائه دهد.  راه حل پیشنهادی، طراحی و پیاده‌سازی سامانه آنالیز و تحلیل احساسات و متون نظرات کاربران مبتنی بر هوش مصنوعی است. 
+                این سامانه، توانایی استخراج و تحلیل تمام اپلیکیشن‌های بانکی داخلی و خارجی و همچنین امکان مقایسه و ارائه پیشنهاد توسط سیستم توصیه‌گر را دارد .</p>
               <!-- دکمه در همین بخش قرار می‌گیرد -->
               <div class="text-center">
-                <a class="cta" href="product3.html">بزودی ...</a>
+                <div class="cta cta_deactive"> بزودی ...</div>
               </div>
             </div>
         </section>
